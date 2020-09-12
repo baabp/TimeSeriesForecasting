@@ -6,11 +6,11 @@ import torch
 import torch.nn as nn
 import torch.optim as optimizers
 from torch.utils.tensorboard import SummaryWriter
-# from torchsummaryX import summary
+from torchsummaryX import summary
 
-from codes.dataset.ts_dataset import TimeSeriesDatasetDelhi
-from codes.models.utils import EarlyStopping
-from codes.models.ts_lstm import LSTM
+from code.dataset.ts_dataset import TimeSeriesDatasetDelhi
+from code.models.utils import EarlyStopping
+from code.models.ts_lstm import LSTM
 
 
 def train_one_epoch(model, criterion, optimizer, X, y, batch_size, device, epoch=None, print_freq=None, writer=None):
